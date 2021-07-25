@@ -10,6 +10,7 @@ export default function Menu() {
     whoWeAreSectionRef,
     socialProgramsSectionRef,
     testimonialsSectionRef,
+    partnershipBannerRef,
   } = componentRefs;
 
   function scrollComponentIntoView(component) {
@@ -31,7 +32,9 @@ export default function Menu() {
       <button onClick={() => scrollComponentIntoView(testimonialsSectionRef)}>
         Depoimentos
       </button>
-      <button onClick={() => scrollComponentIntoView()}>Parcerias</button>
+      <button onClick={() => scrollComponentIntoView(partnershipBannerRef)}>
+        Parcerias
+      </button>
     </Container>
   );
 }
