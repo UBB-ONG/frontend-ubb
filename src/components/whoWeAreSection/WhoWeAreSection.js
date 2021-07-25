@@ -1,17 +1,7 @@
-import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import teamPicture from "../../assets/images/team.png";
-import SectionsContext from "../../contexts/SectionsContext";
 
-export default function WhoWeAreSection() {
-  const { componentRefs, setComponentRefs } = useContext(SectionsContext);
-
-  const whoWeAreSectionRef = useRef();
-
-  useEffect(() => {
-    setComponentRefs({ ...componentRefs, whoWeAreSectionRef });
-  }, []);
-
+export default function WhoWeAreSection({ whoWeAreSectionRef }) {
   return (
     <Container ref={whoWeAreSectionRef} id="whoWeAre">
       <div>

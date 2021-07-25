@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import styled from "styled-components";
 import SectionsContext from "../../contexts/SectionsContext";
 
 export default function Menu() {
   const { componentRefs } = useContext(SectionsContext);
-  const { whoWeAreSectionRef } = componentRefs;
+  useEffect(() => {});
+
+  const { whoWeAreSectionRef, socialProgramsSectionRef } = componentRefs;
   function scrollComponentIntoView(component) {
     return component?.current.scrollIntoView({
       block: "center",
@@ -17,7 +19,9 @@ export default function Menu() {
       <button onClick={() => scrollComponentIntoView(whoWeAreSectionRef)}>
         Quem Somos
       </button>
-      <button onClick={() => scrollComponentIntoView()}>Programas</button>
+      <button onClick={() => scrollComponentIntoView(socialProgramsSectionRef)}>
+        Programas
+      </button>
       <button onClick={() => scrollComponentIntoView()}>Depoimentos</button>
       <button onClick={() => scrollComponentIntoView()}>Parcerias</button>
     </Container>
