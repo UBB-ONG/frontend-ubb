@@ -6,7 +6,12 @@ export default function Menu() {
   const { componentRefs } = useContext(SectionsContext);
   useEffect(() => {});
 
-  const { whoWeAreSectionRef, socialProgramsSectionRef } = componentRefs;
+  const {
+    whoWeAreSectionRef,
+    socialProgramsSectionRef,
+    testimonialsSectionRef,
+  } = componentRefs;
+
   function scrollComponentIntoView(component) {
     return component?.current.scrollIntoView({
       block: "center",
@@ -14,6 +19,7 @@ export default function Menu() {
       behavior: "smooth",
     });
   }
+
   return (
     <Container>
       <button onClick={() => scrollComponentIntoView(whoWeAreSectionRef)}>
@@ -22,7 +28,9 @@ export default function Menu() {
       <button onClick={() => scrollComponentIntoView(socialProgramsSectionRef)}>
         Programas
       </button>
-      <button onClick={() => scrollComponentIntoView()}>Depoimentos</button>
+      <button onClick={() => scrollComponentIntoView(testimonialsSectionRef)}>
+        Depoimentos
+      </button>
       <button onClick={() => scrollComponentIntoView()}>Parcerias</button>
     </Container>
   );
