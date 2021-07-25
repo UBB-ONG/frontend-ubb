@@ -1,12 +1,25 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import SectionsContext from "../../contexts/SectionsContext";
 
 export default function Menu() {
+  const { componentRefs } = useContext(SectionsContext);
+  const { whoWeAreSectionRef } = componentRefs;
+  function scrollComponentIntoView(component) {
+    return component?.current.scrollIntoView({
+      block: "center",
+      inline: "nearest",
+      behavior: "smooth",
+    });
+  }
   return (
     <Container>
-      <a href="#">Quem Somos</a>
-      <a href="#">Programas</a>
-      <a href="#">Depoimentos</a>
-      <a href="#">Parcerias</a>
+      <button onClick={() => scrollComponentIntoView(whoWeAreSectionRef)}>
+        Quem Somos
+      </button>
+      <button onClick={() => scrollComponentIntoView()}>Programas</button>
+      <button onClick={() => scrollComponentIntoView()}>Depoimentos</button>
+      <button onClick={() => scrollComponentIntoView()}>Parcerias</button>
     </Container>
   );
 }
@@ -19,7 +32,8 @@ const Container = styled.nav`
   top: 47px;
   right: 164px;
 
-  a {
+  button {
+    display: inline-block !important;
     text-decoration: none;
     color: #000;
     font-family: "Noto Sans", sans-serif;
