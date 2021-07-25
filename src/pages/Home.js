@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Banner from "../components/banner/Banner";
 import SocialProgramsSection from "../components/socialProgramsSection/SocialProgramsSection";
+import WhereWeOperate from "../components/whereWeOperateSection/WhereWeOperateSection";
 import WhoWeAreSection from "../components/whoWeAreSection/WhoWeAreSection";
 import SectionsContext from "../contexts/SectionsContext";
 
@@ -21,6 +22,7 @@ export default function Home() {
       <SocialProgramsSection
         socialProgramsSectionRef={socialProgramsSectionRef}
       />
+      <WhereWeOperate />
     </Container>
   );
 }
