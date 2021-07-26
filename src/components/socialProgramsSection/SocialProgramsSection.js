@@ -28,7 +28,11 @@ export default function SocialProgramsSection({ socialProgramsSectionRef }) {
         ))}
       </div>
       <SocialImpact />
-      <Button bgColor="#2C4B7A" onClick={() => setIsRedirecting(true)}>
+      <Button
+        bgColor="#2C4B7A"
+        hoverBrightness
+        onClick={() => setIsRedirecting(true)}
+      >
         {isRedirecting ? "Aguarde..." : "DOE AGORA"}
       </Button>
     </Container>

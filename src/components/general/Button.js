@@ -16,6 +16,13 @@ const Button = styled.button`
 
   cursor: pointer;
 
+  ${({ hoverBrightness }) =>
+    hoverBrightness
+      ? ` &:hover{
+    filter: brightness(1.2);
+ } `
+      : ""}
+
   @media (max-width: 620px) {
     height: 29px;
     width: 117px;

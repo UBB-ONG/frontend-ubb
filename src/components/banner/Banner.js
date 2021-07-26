@@ -15,7 +15,11 @@ export default function Banner() {
     <Container>
       <div>
         <p>O verdadeiro amor é o gesto de se doar pelo próximo</p>
-        <Button bgColor="#47A634" onClick={() => setIsRedirecting(true)}>
+        <Button
+          bgColor="#47A634"
+          hoverBrightness
+          onClick={() => setIsRedirecting(true)}
+        >
           {isRedirecting ? "Aguarde..." : "DOE AGORA"}
         </Button>
       </div>

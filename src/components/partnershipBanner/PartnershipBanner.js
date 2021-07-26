@@ -15,7 +15,11 @@ export default function PartnershipBanner({ partnershipBannerRef }) {
   return (
     <Container ref={partnershipBannerRef}>
       <p>Faça parceria com a UBB</p>
-      <Button bgColor="#47A634" onClick={() => setSendingToWhatsapp(true)}>
+      <Button
+        bgColor="#47A634"
+        hoverBrightness
+        onClick={() => setSendingToWhatsapp(true)}
+      >
         <WhatsappIcon />
         {sendingToWhatsapp ? "Aguarde" : "PARTICIPE"}
       </Button>
