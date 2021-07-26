@@ -24,7 +24,7 @@ export default function ContactInfo() {
           Contato
           <br />
         </span>
-        <a href="#" className="emailLink">
+        <a href="#" className="emailLink" onClick={() => alert("Em breve...")}>
           <EmailIcon />
           email
         </a>
