@@ -3,20 +3,32 @@ import partnershipBannerImage from "../../assets/images/partnershipBanner.png";
 import Button from "../general/Button";
 
 import { AiOutlineWhatsApp as WhatsappIcon } from "react-icons/ai";
+import { useState } from "react";
 
 export default function PartnershipBanner({ partnershipBannerRef }) {
+  const [sendingToWhatsapp, setSendingToWhatsapp] = useState(false);
+
+  if (sendingToWhatsapp) {
+    goToWhatsapp();
+  }
+
   return (
     <Container ref={partnershipBannerRef}>
       <p>Faça parceria com a UBB</p>
-      <Button bgColor="#47A634">
+      <Button bgColor="#47A634" onClick={() => setSendingToWhatsapp(true)}>
         <WhatsappIcon />
-        PARTICIPE
+        {sendingToWhatsapp ? "Aguarde" : "PARTICIPE"}
       </Button>
       <div />
       <div />
       <img src={partnershipBannerImage} />
     </Container>
   );
+
+  function goToWhatsapp() {
+    window.location.href =
+      "https://api.whatsapp.com/send?phone=5511947773318&text=Ol%C3%A1!%20Eu%20Gostaria%20de%20saber%20mais%20sobre%20como%20fazer%20uma%20parceria%20com%20a%20UBB.";
+  }
 }
 
 const Container = styled.div`

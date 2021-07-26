@@ -29,7 +29,10 @@ export default function ContactInfo() {
           email
         </a>
         <br />
-        <a href="#" className="whatsappLink">
+        <a
+          className="whatsappLink"
+          href="https://api.whatsapp.com/send?phone=5511946026591&text=Ol%C3%A1.%20Gostaria%20de%20saber%20mais%20sobre%20a%20UBB!"
+        >
           <WhatsappIcon />
           (11)94602-6591
         </a>
