@@ -55,11 +55,23 @@ const Container = styled.nav`
     font-family: "Noto Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
+    transition: all 0s;
+    margin-bottom: 2px;
+
+    &:hover {
+      border-bottom: 2px solid black !important;
+      margin-bottom: 0;
+    }
   }
 
   @media (max-width: 950px) {
     button {
       margin-bottom: 5px;
+
+      &:hover {
+        border-bottom: none !important;
+        margin-bottom: 5px;
+      }
     }
   }
 `;
