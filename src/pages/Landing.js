@@ -18,7 +18,11 @@ export default function Landing() {
         <div>
           <img src={logo} alt="UBB" />
           <p>O verdadeiro amor é o gesto de se doar pelo próximo</p>
-          <Button bgColor="#2C4B7A" onClick={() => setIsRedirecting(true)}>
+          <Button
+            bgColor="#2C4B7A"
+            hoverBrightness
+            onClick={() => setIsRedirecting(true)}
+          >
             {isRedirecting ? "Aguarde..." : "DOE AGORA"}
           </Button>
         </div>
