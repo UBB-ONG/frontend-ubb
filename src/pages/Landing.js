@@ -2,21 +2,26 @@ import styled from "styled-components";
 import Footer from "../components/footer/Footer";
 import logo from "../assets/images/logo.png";
 import Button from "../components/general/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import sendToMoneyCollectionSite from "../utils/sendToMoneyCollectionSite";
+import { useHistory } from "react-router-dom";
 
 export default function Landing() {
   const [isRedirecting, setIsRedirecting] = useState(false);
+  const history = useHistory();
 
   if (isRedirecting) {
     sendToMoneyCollectionSite();
   }
 
+  const goToHome = () => history.push("/");
+
   return (
     <Container>
       <Content>
         <div>
-          <img src={logo} alt="UBB" />
+          <img src={logo} alt="UBB" onClick={goToHome} />
+
           <p>O verdadeiro amor é o gesto de se doar pelo próximo</p>
           <Button
             bgColor="#2C4B7A"
@@ -66,6 +71,7 @@ const Content = styled.div`
   img {
     width: 250px;
     height: 96px;
+    cursor: pointer;
   }
 
   p {

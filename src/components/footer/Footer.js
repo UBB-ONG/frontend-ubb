@@ -1,12 +1,17 @@
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import footerLogo from "../../assets/images/footerLogo.png";
 import ContactInfo from "./ContactInfo";
 
 export default function Footer({ fixed, noMargin, small }) {
+  const history = useHistory();
+
+  const goToHome = () => history.push("/");
+
   return (
     <Container fixed={fixed} noMargin={noMargin} small={small}>
       <div>
-        <img src={footerLogo} />
+        <img src={footerLogo} onClick={goToHome} />
       </div>
       <ContactInfo />
     </Container>
@@ -36,6 +41,7 @@ const Container = styled.div`
 
   & > div > img {
     width: 337px;
+    cursor: pointer;
   }
 
   @media (max-width: 1200px) {
