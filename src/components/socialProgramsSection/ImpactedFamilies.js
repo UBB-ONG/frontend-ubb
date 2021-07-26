@@ -6,7 +6,7 @@ export default function ImpactedFamilies() {
     <Container>
       <div>
         <HiUserGroup color="#47A634" size="80px" />
-        <p>450</p>
+        <p>650</p>
       </div>
       <p>Famílias impactadas</p>
     </Container>

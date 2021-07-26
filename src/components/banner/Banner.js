@@ -14,7 +14,7 @@ export default function Banner() {
   return (
     <Container>
       <div>
-        <p>Nos ajude a melhorar o mundo com pequenos gestos</p>
+        <p>O verdadeiro amor é o gesto de se doar pelo próximo</p>
         <Button bgColor="#47A634" onClick={() => setIsRedirecting(true)}>
           {isRedirecting ? "Aguarde..." : "DOE AGORA"}
         </Button>
