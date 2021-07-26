@@ -133,7 +133,7 @@ const Container = styled.div`
       margin-bottom: 30px;
     }
     & > button {
-      top: 92px;
+      top: 70px;
     }
     .btn-right {
       right: calc(5vw);
@@ -147,6 +147,9 @@ const Container = styled.div`
   @media (max-width: 600px) {
     & > p {
       font-size: 16px;
+    }
+    & > button {
+      top: 60px;
     }
   }
 `;
