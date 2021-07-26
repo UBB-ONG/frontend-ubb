@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import styled from "styled-components";
 import SectionsContext from "../../contexts/SectionsContext";
 
-export default function Menu() {
+export default function Menu({ setShowMobileMenu }) {
   const { componentRefs } = useContext(SectionsContext);
   useEffect(() => {});
 
@@ -14,6 +14,7 @@ export default function Menu() {
   } = componentRefs;
 
   function scrollComponentIntoView(component) {
+    setShowMobileMenu(false);
     return component?.current.scrollIntoView({
       block: "center",
       inline: "nearest",
@@ -54,5 +55,11 @@ const Container = styled.nav`
     font-family: "Noto Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
+  }
+
+  @media (max-width: 950px) {
+    button {
+      margin-bottom: 5px;
+    }
   }
 `;

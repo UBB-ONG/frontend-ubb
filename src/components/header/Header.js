@@ -16,7 +16,7 @@ export default function Header() {
           {<MobileMenuIcon isOpen={showMobileMenu} />}
         </button>
       </div>
-      <Menu showMobileMenu={showMobileMenu} />
+      <Menu setShowMobileMenu={setShowMobileMenu} />
     </Container>
   );
 }
@@ -95,7 +95,7 @@ const Container = styled.div`
 
       margin-top: 40px;
 
-      top: 74px;
+      top: 70px;
       right: calc(50vw - 75px);
 
       a {
