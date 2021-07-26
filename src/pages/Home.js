@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Banner from "../components/banner/Banner";
+import OursPartersSection from "../components/ourPartnersSection/OurPartnersSection";
 import PartnershipBanner from "../components/partnershipBanner/PartnershipBanner";
 import SocialProgramsSection from "../components/socialProgramsSection/SocialProgramsSection";
 import TestimonialsSection from "../components/testimonialsSection/TestimonialsSection";
@@ -34,6 +35,7 @@ export default function Home() {
       <WhereWeOperate />
       <TestimonialsSection testimonialsSectionRef={testimonialsSectionRef} />
       <PartnershipBanner partnershipBannerRef={partnershipBannerRef} />
+      <OursPartersSection />
     </Container>
   );
 }
