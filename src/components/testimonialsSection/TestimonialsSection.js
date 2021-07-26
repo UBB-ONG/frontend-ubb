@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import slideCarousel from "../general/utils/slideCarousel";
 import TestimonialCard from "./TestimonialCard";
@@ -6,11 +6,20 @@ import {
   FiChevronRight as RightArrow,
   FiChevronLeft as LeftArrow,
 } from "react-icons/fi";
-import getExampleTestimonials from "./utils/getExampleTestimonials";
+import * as testimonials from "../../services/api/testimonials.js";
 
 export default function TestimonialsSection({ testimonialsSectionRef }) {
+  const [testimonialsList, setTestimonialsList] = useState([]);
   const carouselRef = useRef();
-  const testimonialsExample = getExampleTestimonials();
+
+  useEffect(() => {
+    const promise = testimonials.list();
+    promise.then((res) => {
+      setTestimonialsList(res.data);
+    });
+
+    promise.catch((e) => {});
+  }, []);
 
   return (
     <Container>
@@ -28,15 +37,15 @@ export default function TestimonialsSection({ testimonialsSectionRef }) {
         <LeftArrow color="#134563" />
       </button>
       <Carousel ref={carouselRef}>
-        {testimonialsExample.map((t) => (
+        {testimonialsList.map((t) => (
           <li key={t.id}>
             <TestimonialCard
               name={t.name}
-              occupation={t.occupation}
+              occupation={t.office}
               city={t.city}
               relation={t.relation}
-              profilePicture={t.profilePicture}
-              text={t.text}
+              profilePicture={t.avatar_url}
+              text={t.description}
             />
           </li>
         ))}
