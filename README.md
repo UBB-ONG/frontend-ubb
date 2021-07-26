@@ -77,7 +77,7 @@ $ yarn buld ou npm run buld
 
 # Licença
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+Distribuído sob a licença MIT.
 
 <!-- CONTACT -->
 
