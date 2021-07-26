@@ -25,7 +25,7 @@ export default function PartnershipBanner({ partnershipBannerRef }) {
       </Button>
       <div />
       <div />
-      <img src={partnershipBannerImage} />
+      <img src={partnershipBannerImage} alt="Grupo de pessoas" />
     </Container>
   );
 

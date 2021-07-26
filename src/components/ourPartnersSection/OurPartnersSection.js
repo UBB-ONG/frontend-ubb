@@ -31,7 +31,7 @@ export default function OursPartersSection({ OursPartersSectionRef }) {
       <Carousel ref={carouselRef}>
         {partners.map((p) => (
           <li key={p.id}>
-            <img src={p.image} />
+            <img src={p.image} alt={p.alt} />
           </li>
         ))}
       </Carousel>

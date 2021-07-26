@@ -11,7 +11,7 @@ export default function Footer({ fixed, noMargin, small }) {
   return (
     <Container fixed={fixed} noMargin={noMargin} small={small}>
       <div>
-        <img src={footerLogo} onClick={goToHome} />
+        <img src={footerLogo} onClick={goToHome} alt="UBB" />
       </div>
       <ContactInfo />
     </Container>

@@ -6,10 +6,10 @@ import partner5 from "../../../assets/images/partner5.png";
 
 export default function getPartners() {
   return [
-    { id: 1, image: partner1 },
-    { id: 2, image: partner2 },
-    { id: 3, image: partner3 },
-    { id: 4, image: partner4 },
-    { id: 5, image: partner5 },
+    { id: 1, image: partner1, alt: "Logo do Instituto NUA" },
+    { id: 2, image: partner2, alt: "Logo do Projeto Acreditar" },
+    { id: 3, image: partner3, alt: "Logo da Casa de Recuperação INDAC" },
+    { id: 4, image: partner4, alt: "Logo da Rede do Amor" },
+    { id: 5, image: partner5, alt: "Logo de A.D.S Apostólica da Fé" },
   ];
 }

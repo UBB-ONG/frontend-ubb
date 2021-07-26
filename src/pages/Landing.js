@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Footer from "../components/footer/Footer";
 import logo from "../assets/images/logo.png";
 import Button from "../components/general/Button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import sendToMoneyCollectionSite from "../utils/sendToMoneyCollectionSite";
 import { useHistory } from "react-router-dom";
 
