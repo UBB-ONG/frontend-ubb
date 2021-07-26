@@ -2,9 +2,9 @@ import styled from "styled-components";
 import footerLogo from "../../assets/images/footerLogo.png";
 import ContactInfo from "./ContactInfo";
 
-export default function Footer() {
+export default function Footer({ fixed, noMargin, small }) {
   return (
-    <Container>
+    <Container fixed={fixed} noMargin={noMargin} small={small}>
       <div>
         <img src={footerLogo} />
       </div>
@@ -17,13 +17,22 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 296px;
+  height: ${({ small }) => (small ? "200px" : "296px")};
   width: 100vw;
 
   background-color: #f2f2f1;
 
-  margin-top: 120px;
+  margin-top: ${({ noMargin }) => (noMargin ? 0 : "120px")};
   padding-top: 36px;
+
+  ${({ fixed }) =>
+    fixed
+      ? `
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  `
+      : ""}
 
   & > div > img {
     width: 337px;

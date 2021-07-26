@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
+import Header from "../components/header/Header";
 import Banner from "../components/banner/Banner";
 import Footer from "../components/footer/Footer";
 import OursPartersSection from "../components/ourPartnersSection/OurPartnersSection";
@@ -27,18 +28,21 @@ export default function Home() {
   }, []);
 
   return (
-    <Container>
-      <Banner />
-      <WhoWeAreSection whoWeAreSectionRef={whoWeAreSectionRef} />
-      <SocialProgramsSection
-        socialProgramsSectionRef={socialProgramsSectionRef}
-      />
-      <WhereWeOperate />
-      <TestimonialsSection testimonialsSectionRef={testimonialsSectionRef} />
-      <PartnershipBanner partnershipBannerRef={partnershipBannerRef} />
-      <OursPartersSection />
-      <Footer />
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <Banner />
+        <WhoWeAreSection whoWeAreSectionRef={whoWeAreSectionRef} />
+        <SocialProgramsSection
+          socialProgramsSectionRef={socialProgramsSectionRef}
+        />
+        <WhereWeOperate />
+        <TestimonialsSection testimonialsSectionRef={testimonialsSectionRef} />
+        <PartnershipBanner partnershipBannerRef={partnershipBannerRef} />
+        <OursPartersSection />
+        <Footer />
+      </Container>
+    </>
   );
 }
 
