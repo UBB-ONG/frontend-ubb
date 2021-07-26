@@ -1,13 +1,23 @@
+import { useState } from "react";
 import styled from "styled-components";
 import bannerImage from "../../assets/images/banner.png";
+import sendToMoneyCollectionSite from "../../utils/sendToMoneyCollectionSite";
 import Button from "../general/Button";
 
 export default function Banner() {
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
+  if (isRedirecting) {
+    sendToMoneyCollectionSite();
+  }
+
   return (
     <Container>
       <div>
         <p>Nos ajude a melhorar o mundo com pequenos gestos</p>
-        <Button bgColor="#47A634">DOE AGORA</Button>
+        <Button bgColor="#47A634" onClick={() => setIsRedirecting(true)}>
+          {isRedirecting ? "Aguarde..." : "DOE AGORA"}
+        </Button>
       </div>
       <img src={bannerImage} alt="Mãos de um grupo de pessoas" />
     </Container>

@@ -3,9 +3,16 @@ import SocialImpact from "./SocialImpact";
 import SocialProgramCard from "./SocialProgramCard";
 import getDefaultSocialPrograms from "./utils/getDefaultSocialPrograms";
 import Button from "../general/Button";
+import sendToMoneyCollectionSite from "../../utils/sendToMoneyCollectionSite";
+import { useState } from "react";
 
 export default function SocialProgramsSection({ socialProgramsSectionRef }) {
   const socialPrograms = getDefaultSocialPrograms();
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
+  if (isRedirecting) {
+    sendToMoneyCollectionSite();
+  }
 
   return (
     <Container ref={socialProgramsSectionRef}>
@@ -21,7 +28,9 @@ export default function SocialProgramsSection({ socialProgramsSectionRef }) {
         ))}
       </div>
       <SocialImpact />
-      <Button bgColor="#2C4B7A">DOE AGORA</Button>
+      <Button bgColor="#2C4B7A" onClick={() => setIsRedirecting(true)}>
+        {isRedirecting ? "Aguarde..." : "DOE AGORA"}
+      </Button>
     </Container>
   );
 }
