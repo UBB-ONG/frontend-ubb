@@ -42,11 +42,11 @@ export default function ContactInfo() {
         <span>Redes sociais</span>
         <br />
         <span className="socialMediasHolder">
-          <a href="#">
+          <a href="https://www.facebook.com/uniaobeneficentebrasileira/">
             <FacebookIcon color="#1F2D3D" />
           </a>
 
-          <a href="#">
+          <a href="#" onClick={() => alert("Em breve")}>
             <InstagramIcon color="#1F2D3D" />
           </a>
         </span>
