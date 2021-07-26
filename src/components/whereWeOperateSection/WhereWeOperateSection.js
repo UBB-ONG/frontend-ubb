@@ -67,6 +67,7 @@ const Container = styled.div`
       margin-top: 20px;
       img {
         width: 70px;
+        height: 70px;
       }
 
       p {
