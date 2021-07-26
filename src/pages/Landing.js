@@ -24,7 +24,7 @@ export default function Landing() {
         </div>
         <div>
           <video width="600" height="451" controls>
-            <source src="" type="video/mp4" />
+            <source src="https://youtu.be/7IxLNNFQD-I" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
