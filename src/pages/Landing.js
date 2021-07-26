@@ -23,10 +23,13 @@ export default function Landing() {
           </Button>
         </div>
         <div>
-          <video width="600" height="451" controls>
-            <source src="https://youtu.be/7IxLNNFQD-I" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            width="600"
+            height="451"
+            src="https://www.youtube.com/embed/7IxLNNFQD-I?controls=0"
+            title="YouTube video player"
+            allowFullScreen
+          ></iframe>
         </div>
       </Content>
       <Footer noMargin fixed small />
