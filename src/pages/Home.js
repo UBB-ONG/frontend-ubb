@@ -22,6 +22,7 @@ export default function Home() {
   const partnershipBannerRef = useRef();
 
   if (isRedirecting) {
+    setTimeout(() => setIsRedirecting(false), 1000);
     sendToMoneyCollectionSite();
   }
 

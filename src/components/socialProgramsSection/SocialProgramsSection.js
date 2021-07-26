@@ -11,6 +11,7 @@ export default function SocialProgramsSection({ socialProgramsSectionRef }) {
   const [isRedirecting, setIsRedirecting] = useState(false);
 
   if (isRedirecting) {
+    setTimeout(() => setIsRedirecting(false), 1000);
     sendToMoneyCollectionSite();
   }
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import bannerImage from "../../assets/images/banner.png";
 import sendToMoneyCollectionSite from "../../utils/sendToMoneyCollectionSite";
@@ -8,6 +8,7 @@ export default function Banner() {
   const [isRedirecting, setIsRedirecting] = useState(false);
 
   if (isRedirecting) {
+    setTimeout(() => setIsRedirecting(false), 1000);
     sendToMoneyCollectionSite();
   }
 

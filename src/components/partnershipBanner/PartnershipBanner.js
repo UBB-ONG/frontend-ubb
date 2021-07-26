@@ -9,6 +9,7 @@ export default function PartnershipBanner({ partnershipBannerRef }) {
   const [sendingToWhatsapp, setSendingToWhatsapp] = useState(false);
 
   if (sendingToWhatsapp) {
+    setTimeout(() => setSendingToWhatsapp(false), 1000);
     goToWhatsapp();
   }
 
@@ -21,7 +22,7 @@ export default function PartnershipBanner({ partnershipBannerRef }) {
         onClick={() => setSendingToWhatsapp(true)}
       >
         <WhatsappIcon />
-        {sendingToWhatsapp ? "Aguarde" : "PARTICIPE"}
+        {sendingToWhatsapp ? "Aguarde..." : "PARTICIPE"}
       </Button>
       <div />
       <div />

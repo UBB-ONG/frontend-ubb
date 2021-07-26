@@ -11,6 +11,7 @@ export default function Landing() {
   const history = useHistory();
 
   if (isRedirecting) {
+    setTimeout(() => setIsRedirecting(false), 1000);
     sendToMoneyCollectionSite();
   }
 
