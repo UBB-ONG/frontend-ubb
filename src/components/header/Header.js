@@ -53,7 +53,7 @@ const Container = styled.div`
 
   button {
     display: none;
-    background-color: none;
+    background-color: #f2f2f1;
     border: none;
     cursor: pointer;
   }

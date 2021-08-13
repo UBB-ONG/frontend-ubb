@@ -7,13 +7,13 @@ export default function WhoWeAreSection({ whoWeAreSectionRef }) {
       <div>
         <p>Quem Somos</p>
         <p>
-          Somos uma Ong que visa ajudar pessoa que estão em situações precárias
-          e que precisam de ajuda situadas inicialmente na zona leste, mas
-          pretendemos aumentar para fora.
+          A União Beneficente Brasileira em Assistência Social (UBB) é uma ong
+          que visa ajudar pessoas na zona leste de São Paulo que estão em
+          situação de vulnerabilidade e precisam de ajuda.
           <br />
           <br />
-          Queremos não apenas ajudar em materias, mas também na educação e no
-          melhoramento interno pessoal delas.
+          Queremos ajudar não apenas com materiais, mas também com educação e
+          desenvolvimento pessoal.
         </p>
       </div>
       <img src={teamPicture} alt="Foto do time" />
