@@ -6,6 +6,8 @@ import {
   FaInstagramSquare as InstagramIcon,
 } from "react-icons/fa";
 
+import { toast } from "react-toastify";
+
 export default function ContactInfo() {
   return (
     <Container>
@@ -24,7 +26,7 @@ export default function ContactInfo() {
           Contato
           <br />
         </span>
-        <a href="#" className="emailLink" onClick={() => alert("Em breve...")}>
+        <a href="#" className="emailLink" onClick={() => toast("Em breve")}>
           <EmailIcon />
           email
         </a>
@@ -46,7 +48,7 @@ export default function ContactInfo() {
             <FacebookIcon color="#1F2D3D" />
           </a>
 
-          <a href="#" onClick={() => alert("Em breve")}>
+          <a href="#" onClick={() => toast("Em breve")}>
             <InstagramIcon color="#1F2D3D" />
           </a>
         </span>

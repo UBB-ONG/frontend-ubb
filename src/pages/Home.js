@@ -12,6 +12,7 @@ import WhoWeAreSection from "../components/whoWeAreSection/WhoWeAreSection";
 import SectionsContext from "../contexts/SectionsContext";
 import Button from "../components/general/Button";
 import sendToMoneyCollectionSite from "../utils/sendToMoneyCollectionSite";
+import { toast } from "react-toastify";
 
 export default function Home() {
   const { setComponentRefs } = useContext(SectionsContext);
