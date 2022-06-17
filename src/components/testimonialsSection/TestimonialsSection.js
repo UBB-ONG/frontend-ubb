@@ -7,9 +7,10 @@ import {
   FiChevronLeft as LeftArrow,
 } from "react-icons/fi";
 import * as testimonials from "../../services/api/testimonials.js";
+import { ThreeDots } from  'react-loader-spinner'
 
 export default function TestimonialsSection({ testimonialsSectionRef }) {
-  const [testimonialsList, setTestimonialsList] = useState([]);
+  const [testimonialsList, setTestimonialsList] = useState(null);
   const carouselRef = useRef();
 
   useEffect(() => {
@@ -36,8 +37,8 @@ export default function TestimonialsSection({ testimonialsSectionRef }) {
       >
         <LeftArrow color="#134563" />
       </button>
-      <Carousel ref={carouselRef}>
-        {testimonialsList.map((t) => (
+      <Carousel ref={carouselRef} isLoading={!testimonialsList}>
+        {!testimonialsList ? Loader : testimonialsList.map((t) => (
           <li key={t.id}>
             <TestimonialCard
               name={t.name}
@@ -59,7 +60,13 @@ const Carousel = styled.ul`
   width: 90vw;
   overflow: hidden;
   overflow-x: scroll;
-
+ 
+  ${({isLoading})=> isLoading ?
+   ` min-height: 23vh;
+     justify-content:center;
+     align-items: center;
+   ` : ""}
+  
   li {
     display: flex;
     justify-content: center;
@@ -75,6 +82,8 @@ const Carousel = styled.ul`
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+
 `;
 
 const Container = styled.div`
@@ -131,3 +140,5 @@ const Container = styled.div`
     }
   }
 `;
+
+const Loader = <ThreeDots color="#2C4B7A" height={80} width={80} />
